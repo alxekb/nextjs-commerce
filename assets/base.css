@@ -3,7 +3,7 @@
   --primary-2: #f1f3f5;
   --secondary: #000000;
   --secondary-2: #111;
-  --selection: var(--cyan);
+  --selection: #fafaaf;
 
   --text-base: #000000;
   --text-primary: #000000;
@@ -23,8 +23,9 @@
 
   --magenta: #eb367f;
 
-  --violet: #7928ca;
-  --violet-dark: #4c2889;
+  /* --violet: #7928ca; */
+  /* --violet-dark: #4c2889; */
+  --violet: #1211;
 
   --accent-0: #fff;
   --accent-1: #fafafa;
@@ -49,7 +50,7 @@
   --hover: rgba(255, 255, 255, 0.075);
   --hover-1: rgba(255, 255, 255, 0.15);
   --hover-2: rgba(255, 255, 255, 0.25);
-  --selection: var(--purple);
+  --selection: var(--accent-8);
 
   --text-base: white;
   --text-primary: white;
