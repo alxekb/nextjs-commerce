@@ -29,17 +29,17 @@ const dynamicProps = {
 
 const SignUpView = dynamic(
   () => import('@components/auth/SignUpView'),
-  { dynamicProps }
+  dynamicProps
 )
 
 const ForgotPassword = dynamic(
   () => import('@components/auth/ForgotPassword'),
-  { dynamicProps }
+  dynamicProps
 )
 
 const FeatureBar = dynamic(
   () => import('@components/common/FeatureBar'),
-  { dynamicProps }
+  dynamicProps
 )
 
 interface Props {
