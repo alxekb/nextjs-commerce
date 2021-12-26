@@ -10,7 +10,7 @@ import createCustomizedFetchFetcher, {
   fetchResponseKey,
 } from '../../utils/create-customized-fetch-fetcher'
 import fetch, { Request } from 'node-fetch'
-import type { SpreeSdkResponseWithRawResponse } from '@framework/types'
+import type { SpreeSdkResponseWithRawResponse } from 'framework/spree/types'
 
 export type CreateApiFetch = (
   getConfig: () => SpreeApiConfig
