@@ -63,7 +63,7 @@ const Button: React.FC<ButtonProps> = forwardRef((props, buttonRef) => {
     >
       {children}
       {loading && (
-        <i className="pl-2 m-0 flex">
+        <i className="flex pl-2 m-0">
           <LoadingDots />
         </i>
       )}
@@ -71,4 +71,5 @@ const Button: React.FC<ButtonProps> = forwardRef((props, buttonRef) => {
   )
 })
 
+Button.displayName = 'Button'
 export default Button

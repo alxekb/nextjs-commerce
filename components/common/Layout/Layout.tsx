@@ -23,23 +23,30 @@ const Loading = () => (
   </div>
 )
 
-const dynamicProps = {
-  loading: Loading,
-}
+// const dynamicProps = {
+// tabnine::config
+//
+// }
 
 const SignUpView = dynamic(
   () => import('@components/auth/SignUpView'),
-  dynamicProps
+  {
+    loading: Loading,
+  },
 )
 
 const ForgotPassword = dynamic(
   () => import('@components/auth/ForgotPassword'),
-  dynamicProps
+  {
+    loading: Loading,
+  },
 )
 
 const FeatureBar = dynamic(
   () => import('@components/common/FeatureBar'),
-  dynamicProps
+  {
+    loading: Loading,
+  },
 )
 
 interface Props {

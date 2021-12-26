@@ -59,4 +59,5 @@ const Swatch: React.FC<Omit<ButtonProps, 'variant'> & SwatchProps> = React.memo(
   }
 )
 
+Swatch.displayName = 'Swatch'
 export default Swatch
