@@ -8,7 +8,7 @@ import type { IProducts } from '@spree/storefront-api-v2-sdk/types/interfaces/Pr
 import type { SpreeApiConfig, SpreeApiProvider } from '../index'
 import type { SpreeSdkVariables } from 'framework/spree/types'
 import normalizeProduct from '../../utils/normalize-product'
-import { requireConfigValue } from 'framework/spree/isomorphic-config'
+import { requireConfigValue } from '@framework/isomorphic-config'
 
 const imagesSize = requireConfigValue('imagesSize') as string
 const imagesQuality = requireConfigValue('imagesQuality') as number
