@@ -2,7 +2,7 @@ import commerce from '@lib/api/commerce'
 import { Layout } from '@components/common'
 import { ProductCard } from '@components/product'
 import { Grid, Marquee, Hero } from '@components/ui'
-// import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
+import HomeAllProductsGrid from '@components/common/HomeAllProductsGrid'
 import type { GetStaticPropsContext, InferGetStaticPropsType } from 'next'
 
 export async function getStaticProps({
@@ -16,7 +16,7 @@ export async function getStaticProps({
     config,
     preview,
     // Saleor provider only
-    ...({ featured: true } as any),
+    // ...({ featured: true } as any),
   })
   const pagesPromise = commerce.getAllPages({ config, preview })
   const siteInfoPromise = commerce.getSiteInfo({ config, preview })
@@ -53,13 +53,13 @@ export default function Home({
         ))}
       </Grid>
       <Marquee variant="secondary">
-        {products.slice(0, 3).map((product: any, i: number) => (
+        {products.slice(0, 3).map((product: any, _i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}
       </Marquee>
       <Hero
-        headline=" Dessert dragée halvah croissant."
-        description="Cupcake ipsum dolor sit amet lemon drops pastry cotton candy. Sweet carrot cake macaroon bonbon croissant fruitcake jujubes macaroon oat cake. Soufflé bonbon caramels jelly beans. Tiramisu sweet roll cheesecake pie carrot cake. "
+        headline="Perla Gemella"
+        description="🐚 Трендовые украшения из жемчуга и камней 🐚 Фурнитура люкс 🐚 Эстетика изящных линий  Отправляем по 🌍"
       />
       <Grid layout="B" variant="filled">
         {products.slice(0, 3).map((product: any, i: number) => (
@@ -74,17 +74,19 @@ export default function Home({
         ))}
       </Grid>
       <Marquee>
-        {products.slice(3).map((product: any, i: number) => (
+        {products.slice(3).map((product: any, _i: number) => (
           <ProductCard key={product.id} product={product} variant="slim" />
         ))}
       </Marquee>
-      {/* <HomeAllProductsGrid
-        newestProducts={products}
-        categories={categories}
-        brands={brands}
-      /> */}
+      <HomeAllProductsGrid
+        products={products}
+        // brands={brands}
+        brands={[ { node: { entityId: '6', path: 'brands/6', name: 'Perlagemella' } } ]}
+        // categories={categories}
+        categories={[ { id: '5', name: 'Чокеры', slug: '5', path: '5' } ]}
+      />
     </>
   )
 }
 
-Home.Layout = Layout
+Home.Latyout = Layout

@@ -125,6 +125,8 @@ export default function getSiteInfoOperation({
           }
         })
 
+        console.log(normalizedBrands)
+        console.log(normalizedCategories)
     return {
       categories: normalizedCategories,
       brands: normalizedBrands,

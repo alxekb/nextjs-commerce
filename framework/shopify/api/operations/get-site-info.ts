@@ -37,7 +37,6 @@ export default function getSiteInfoOperation({
 
     const categoriesPromise = getCategories(cfg)
     const brandsPromise = getBrands(cfg)
-    /*
     const { fetch, locale } = cfg
     const { data } = await fetch<GetSiteInfoQuery, GetSiteInfoQueryVariables>(
       query,
@@ -50,7 +49,6 @@ export default function getSiteInfoOperation({
         }),
       }
     )
-    */
 
     return {
       categories: await categoriesPromise,
