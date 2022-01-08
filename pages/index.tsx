@@ -80,10 +80,10 @@ export default function Home({
       </Marquee>
       <HomeAllProductsGrid
         products={products}
-        // brands={brands}
-        brands={[ { node: { entityId: '6', path: 'brands/6', name: 'Perlagemella' } } ]}
-        // categories={categories}
-        categories={[ { id: '5', name: 'Чокеры', slug: '5', path: '5' } ]}
+        brands={brands}
+        // brands={[ { node: { entityId: '6', path: 'brands/6', name: 'Perlagemella' } } ]}
+        categories={categories}
+        // categories={[ { id: '5', name: 'Чокеры', slug: '5', path: '5' } ]}
       />
     </>
   )
